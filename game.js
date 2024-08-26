@@ -5,7 +5,9 @@ class Player {
   constructor() {
     this.hp = 100;
     this.attackPow = Math.floor(Math.random() * 6) + 20;
+    const dmg = this.attackPow;
     this.defensePow = 3;
+    return dmg;
   }
 
   attack(monster) {
@@ -19,6 +21,8 @@ class Player {
     return this.defensePow;
   }
 }
+
+
 
 class Monster {
   constructor(stage) {
