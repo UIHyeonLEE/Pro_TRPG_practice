@@ -28,11 +28,11 @@ class Monster {
     this.attackPow = 4 + stage;
   }
 
-  attack(player) {
+   attack(player) {
     // 몬스터의 공격
     const dmg = this.attackPow ;
-    player.hp -= Math.max(dmg, 0);
-    return Math.max(dmg, 0);
+    player.hp -= dmg;
+    return dmg;
   }
 }
 
